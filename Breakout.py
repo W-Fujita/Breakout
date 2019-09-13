@@ -17,7 +17,7 @@ Y = 480 #画面のy座標の大きさ
 
 pygame.init() #pygameの初期化
 pygame.mixer.init()
-pygame.display.set_caption("BlockBreaker")
+pygame.display.set_caption("Breakout")
 screen = pygame.display.set_mode((X, Y))
 clock = pygame.time.Clock()
 
@@ -261,10 +261,10 @@ class Show():
         
         
 class Write():
-    def blockbreaker(self):
-        blockbreaker_font = pygame.font.SysFont(None, 100)
-        blockbreaker = blockbreaker_font.render("BlockBreaker", True, RED)
-        screen.blit(blockbreaker, ((X-blockbreaker.get_width())/2, 160))
+    def breakout(self):
+        breakout_font = pygame.font.SysFont(None, 100)
+        breakout = breakout_font.render("Breakout", True, RED)
+        screen.blit(breakout, ((X-breakout.get_width())/2, 160))
         
     def pressenter(self):
         pressenter_font = pygame.font.SysFont(None, 60, italic=True)
@@ -316,10 +316,10 @@ while playing:
                 continue_screen = False
 
         show.background()
-        write.blockbreaker()
+        write.breakout()
         show.start()
         show.brick()
-    
+
         pygame.display.flip() #画面の更新
         clock.tick(50)
 
