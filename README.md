@@ -1,4 +1,4 @@
-# BlockBreaker
+# Breakout
 
 このゲームはpythonで実装しています。
 
